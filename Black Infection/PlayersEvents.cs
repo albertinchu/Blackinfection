@@ -84,7 +84,7 @@ namespace BlackInfection
         {
 
             yield return 3f;
-            PluginManager.Manager.Server.Map.AnnounceCustomMessage("attention all facility personnel, Containment Breach. Class Keter.,. Please Evacuate Immediately ");
+            PluginManager.Manager.Server.Map.AnnounceCustomMessage("attention all facility personnel, Containment Breach. Class. Keter. Please Evacuate Immediately ");
         }
 
         public void On106CreatePortal(Player106CreatePortalEvent ev)
@@ -109,7 +109,7 @@ namespace BlackInfection
         public static IEnumerable<float> Portaltp(Player player)
         {
 
-            yield return 5.5f;
+            yield return 5f;
             foreach (KeyValuePair<int,Vector> key in Portales)
             {
                     if(player.PlayerId == key.Key) { player.Teleport(key.Value); }
