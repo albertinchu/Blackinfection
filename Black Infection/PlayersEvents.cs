@@ -84,7 +84,7 @@ namespace BlackInfection
         {
 
             yield return 3f;
-            PluginManager.Manager.Server.Map.AnnounceCustomMessage("attention all facility personnel, Containment Breach. Class. Keter. Please Evacuate Immediately ");
+            PluginManager.Manager.Server.Map.AnnounceCustomMessage("attention all facility personnel, Containment Breach . Class Keter . .  Please Evacuate Immediately ");
         }
 
         public void On106CreatePortal(Player106CreatePortalEvent ev)
