@@ -11,7 +11,7 @@ using Smod2.EventSystem.Events;
 namespace BlackInfection
 {
     partial class PlayersEvents : IEventHandlerPlayerDie, IEventHandlerPocketDimensionDie, IEventHandlerSetSCPConfig, IEventHandlerRoundStart,
-           IEventHandler106CreatePortal, IEventHandlerSetRole, IEventHandler106Teleport
+           IEventHandler106CreatePortal, IEventHandlerSetRole, IEventHandler106Teleport, IEventHandlerWaitingForPlayers
     {
         /////////////////////////////////////////////////////////////////Variables////////////////////////////////////////////////////////////////
 
@@ -116,8 +116,9 @@ namespace BlackInfection
             }                        
         }
 
-
-
-
+        public void OnWaitingForPlayers(WaitingForPlayersEvent ev)
+        {
+            plugin.RefreshConfig();
+        }
     }
 }
