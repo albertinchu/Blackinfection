@@ -29,8 +29,9 @@ namespace BlackInfection
         Vector spawns;
         public void OnPlayerDie(PlayerDeathEvent ev)
         {
-            if (ev.Killer.TeamRole.Role == Role.SCP_106)
-            {
+            if( (ev.Killer.TeamRole.Role == Role.SCP_106)&& (ev.Killer.SteamId != ev.Player.SteamId))
+
+			{
                 if (posiciones == 4) { posiciones = 0; }
                 if (posiciones == 0) { spawns = PluginManager.Manager.Server.Map.GetSpawnPoints(Role.SCP_106).First(); }
                 if (posiciones == 1) { spawns = PluginManager.Manager.Server.Map.GetSpawnPoints(Role.SCP_096).First(); }
