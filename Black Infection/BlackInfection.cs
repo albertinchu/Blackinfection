@@ -10,7 +10,7 @@ namespace BlackInfection
         id = "albertinchu.gamemode.BlackInfection",
         version = "1.0.0",
         SmodMajor = 3,
-        SmodMinor = 0,
+        SmodMinor = 4,
         SmodRevision = 0
         )]
     public class BlackInfection : Plugin
